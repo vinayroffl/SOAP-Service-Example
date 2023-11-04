@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://vinay.r/" xmlns:tns="http://vinay.r/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://service.vinay.r/">
+
+  <xs:import namespace="http://service.vinay.r/" schemaLocation="PersonServiceImplService_schema2.xsd"/>
+
+  <xs:element name="personRq" type="tns:personRq"/>
+
+  <xs:element name="personRs" type="tns:personRs"/>
+
+  <xs:complexType name="personRq">
+    <xs:sequence>
+      <xs:element name="person" type="ns1:person" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personRs">
+    <xs:sequence>
+      <xs:element name="personResponse" type="ns1:personResponse" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://service.vinay.r/" xmlns:tns="http://service.vinay.r/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://vinay.r/">
+
+  <xs:import namespace="http://vinay.r/" schemaLocation="PersonServiceImplService_schema1.xsd"/>
+
+  <xs:element name="executeFindMyJob" type="tns:executeFindMyJob"/>
+
+  <xs:element name="executeFindMyJobResponse" type="tns:executeFindMyJobResponse"/>
+
+  <xs:complexType name="executeFindMyJob">
+    <xs:sequence>
+      <xs:element name="arg0" type="ns1:personRq" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="person">
+    <xs:sequence>
+      <xs:element name="dob" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone" type="xs:string" minOccurs="0"/>
+      <xs:element name="salary" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="executeFindMyJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:personRs" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personResponse">
+    <xs:sequence>
+      <xs:element name="age" type="xs:double"/>
+      <xs:element name="job" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

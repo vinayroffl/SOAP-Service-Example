@@ -1,0 +1,1 @@
+mvn -f %cd%\model\pom.xml clean install && mvn -f %cd%\bussiness-logic\pom.xml clean install && mvn -f %cd%\web-service\pom.xml clean install 
